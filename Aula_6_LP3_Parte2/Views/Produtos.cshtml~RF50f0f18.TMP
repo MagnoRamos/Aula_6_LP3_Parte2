@@ -1,0 +1,55 @@
+﻿@model Aula_6_LP3_Parte2.Models.Produto
+
+@{
+    ViewBag.Title = "Produtos";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Consulta</title>
+</head>
+<body>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr class="thead-dark">
+                <th colspan="6">Consulta Dependente</th>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.IdProduto</td>
+                <td>@item.NomeProduto</td>
+                <td>@item.Preco</td>
+                <td>@item.Descricao</td>
+                <td>
+                    <a href="@Url.Action("AtualizarProduto", "Produto")/@item.IdProduto" class="btn btn-info btn-sm">
+                        Atualizar
+                    </a>
+                    <a href="@Url.Action("DeletarProduto", "Produto")/@item.IdProduto" class="btn btn-danger btn-sm">
+                        Excluir
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Quantidade de dependentes: @Model.Count</td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
