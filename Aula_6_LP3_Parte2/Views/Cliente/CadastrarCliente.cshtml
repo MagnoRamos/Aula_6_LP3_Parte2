@@ -1,0 +1,35 @@
+﻿@model Aula_6_LP3_Parte2.Models.Cliente
+
+@{
+    ViewBag.Title = "CadastrarCliente";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <br />
+    @using (Html.BeginForm("CadastrarCliente", "Cliente"))
+    {
+        <div>
+            @Html.LabelFor(model => model.IdCliente)<br />
+            @Html.TextBoxFor(model => model.IdCliente)<br />
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Nome)<br />
+            @Html.TextBoxFor(model => model.Nome)<br />
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Sexo)<br />
+            @Html.TextBoxFor(model => model.Sexo)<br />
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Endereco)<br />
+            @Html.TextBoxFor(model => model.Endereco)<br />
+        </div>
+        <input type="submit" value="enviar" />
+    }
+</body>
+</html>

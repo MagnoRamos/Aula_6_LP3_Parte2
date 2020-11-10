@@ -1,0 +1,63 @@
+﻿@model List<Aula_6_LP3_Parte2.Models.Cliente>
+
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Consulta</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="thead-dark">
+                    <th colspan="6">Clientes</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Endereço</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdCliente</td>
+                        <td>@item.Nome</td>
+                        <td>@item.Sexo</td>
+                        <td>@item.Endereco</td>
+                        <td>
+                            <a href="@Url.Action("AtualizarCliente", "Cliente")/@item.IdCliente" class="btn btn-info btn-sm">
+                                Atualizar
+                            </a>
+                            <a href="@Url.Action("DeletarCliente", "Cliente")/@item.IdCliente" class="btn btn-danger btn-sm">
+                                Excluir
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <a href="@Url.Action("CadastrarCliente", "Cliente")" class="btn btn-success btn-sm">
+                            Cadastrar
+                        </a>
+                    </td>
+                    <td colspan="6">Quantidade de Clientes Cadastrados: @Model.Count</td>
+                </tr>
+            </tfoot>
+        </table>
+    }
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

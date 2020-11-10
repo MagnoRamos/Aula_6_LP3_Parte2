@@ -12,6 +12,8 @@
     <title>Consulta</title>
 </head>
 <body>
+    @using (Html.BeginForm())
+    {
     <table class="table table-bordered table-hover">
         <thead>
             <tr class="thead-dark">
@@ -45,10 +47,16 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="6">Quantidade de dependentes: @Model.Count</td>
+                <td>
+                    <a href="@Url.Action("CadastrarProduto", "Produto")" class="btn btn-success btn-sm">
+                        Cadastrar
+                    </a>
+                </td>
+                <td colspan="6">Quantidade de Produtos Cadastrados: @Model.Count</td>
             </tr>
         </tfoot>
     </table>
+    }
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>

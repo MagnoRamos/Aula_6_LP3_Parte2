@@ -1,0 +1,33 @@
+﻿@model Aula_6_LP3_Parte2.Models.Produto
+
+@{
+    ViewBag.Title = "AtualizarProduto";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <br />
+        @using (Html.BeginForm("AtualizarProduto","Produto"))
+        {
+            @Html.HiddenFor(model => model.IdProduto)
+
+            <label for="Nome">Nome:</label>
+            @Html.TextBoxFor(model => model.NomeProduto, new { @class = "form-control" })
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.NomeProduto)</span><br />
+
+            <label for="Preco">Preço:</label>
+            @Html.TextBoxFor(model => model.Preco, new { @class = "form-control" })
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.Preco)</span><br />
+
+            <label for="Descricao">Descrição:</label>
+            @Html.TextBoxFor(model => model.Descricao, new { @class = "form-control" })
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.Descricao)</span><br />
+
+            <input type="submit" value="Atualizar" class="btn btn-success" />
+        }
+    </body>
+</html>

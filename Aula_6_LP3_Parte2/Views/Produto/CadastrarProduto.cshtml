@@ -1,7 +1,34 @@
-﻿
+﻿@model Aula_6_LP3_Parte2.Models.Produto
 @{
     ViewBag.Title = "CadastrarProduto";
 }
 
-<h2>CadastrarProduto</h2>
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <br />
+        @using (Html.BeginForm("CadastrarProduto", "Produto"))
+        {
+            <div>
+                @Html.LabelFor(model => model.IdProduto)<br />
+                @Html.TextBoxFor(model => model.IdProduto)<br />
+            </div>
+            <div>
+                @Html.LabelFor(model => model.NomeProduto)<br />
+                @Html.TextBoxFor(model => model.NomeProduto)<br />
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Preco)<br />
+                @Html.TextBoxFor(model => model.Preco)<br />
+            </div>
+            <div>
+                @Html.LabelFor(model => model.Descricao)<br />
+                @Html.TextBoxFor(model => model.Descricao)<br />
+            </div>
+            <input type="submit" value="enviar"/>
+        }
+    </body>
+</html>

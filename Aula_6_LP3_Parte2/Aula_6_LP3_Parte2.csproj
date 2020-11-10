@@ -143,7 +143,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Produto\Produtos.cshtml" />
     <Content Include="Views\Produto\CadastrarProduto.cshtml" />
-    <Content Include="Views\Produto\DeletarProduto.cshtml" />
+    <Content Include="Views\Produto\AtualizarProduto.cshtml" />
+    <Content Include="Views\Cliente\Clientes.cshtml" />
+    <Content Include="Views\Cliente\AtualizarCliente.cshtml" />
+    <Content Include="Views\Cliente\CadastrarCliente.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -151,9 +154,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Cliente\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

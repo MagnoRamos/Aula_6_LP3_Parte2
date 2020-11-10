@@ -43,7 +43,7 @@ namespace Aula_6_LP3_Parte2.Controllers
                 Conexao.Executacomando("insert into Produto values(" + produto.IdProduto + ",'" + produto.NomeProduto + "','" + produto.Descricao + "'," + produto.Preco + ")");
                 Conexao.Fechaconexao();
             }
-            return View(produto);
+            return RedirectToAction("Produtos");
         }
 
         public ActionResult DeletarProduto(int Id)
@@ -53,7 +53,7 @@ namespace Aula_6_LP3_Parte2.Controllers
                 Conexao.Executacomando("Delete from Produto where Id = " + Id + "");
                 Conexao.Fechaconexao();
             }
-            return View();
+            return RedirectToAction("Produtos");
         }
 
         public ActionResult AtualizarProduto(int Id)
@@ -61,17 +61,20 @@ namespace Aula_6_LP3_Parte2.Controllers
             Produto produto = new Produto();
             if (Conexao.Conecta())
             {
-                Conexao.Executacomando("select * from Produto where IdProduto = " + Id + "");
-                produto.IdProduto = Convert.ToInt32(Conexao.leitor["IdProduto"]);
-                produto.NomeProduto = Conexao.leitor["NomeProduto"].ToString();
-                produto.Preco = Convert.ToDouble(Conexao.leitor["Preco"]);
-                produto.Descricao = Conexao.leitor["Descricao"].ToString();
-
+                Conexao.Executacomando("select * from Produto where Id = " + Id + "");
+                if (Conexao.leitor.Read())
+                {
+                    produto.IdProduto = Convert.ToInt32(Conexao.leitor["Id"]);
+                    produto.NomeProduto = Conexao.leitor["Nome"].ToString();
+                    produto.Preco = Convert.ToDouble(Conexao.leitor["Preco"]);
+                    produto.Descricao = Conexao.leitor["Descricao"].ToString();
+                }
                 Conexao.Fechaconexao();
             }
             return View(produto);
         }
 
+        [HttpPost]
         public ActionResult AtualizarProduto(Produto produto)
         {
             if (Conexao.Conecta())

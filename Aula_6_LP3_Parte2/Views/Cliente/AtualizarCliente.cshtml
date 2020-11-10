@@ -1,0 +1,33 @@
+﻿@model Aula_6_LP3_Parte2.Models.Cliente
+
+@{
+    ViewBag.Title = "AtualizarCliente";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <br />
+    @using (Html.BeginForm("AtualizarCliente", "Cliente"))
+    {
+        @Html.HiddenFor(model => model.IdCliente)
+
+        <label for="Nome">Nome:</label>
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(model => model.Nome)</span><br />
+
+        <label for="Sexo">Sexo:</label>
+        @Html.TextBoxFor(model => model.Sexo, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(model => model.Sexo)</span><br />
+
+        <label for="Endereco">Endereço:</label>
+        @Html.TextBoxFor(model => model.Endereco, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(model => model.Endereco)</span><br />
+
+        <input type="submit" value="Atualizar" class="btn btn-success" />
+    }
+</body>
+</html>
