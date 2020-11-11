@@ -1,0 +1,68 @@
+﻿@model Aula_6_LP3_Parte2.Models.Compra
+
+@{
+    ViewBag.Title = "Compras";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li id="atu"><h1><a href="@Url.Action("Index","Home")">Home</a></h1></a></li>
+            <li><a href="@Url.Action("Clientes","Cliente")">Cliente</a></li>
+            <li><a href="@Url.Action("Produtos","Produto")">Produto</a></li>
+            <li><a href="@Url.Action("Compras","Compra")">Compra</a></li>
+        </ul>
+    </nav>
+    @using (Html.BeginForm("AdicionarCompra", "Compra", FormMethod.Post))
+    {
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="thead-dark">
+                    <th colspan="6">Produtos</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Produtos)
+                {
+
+                    <tr>
+                        <td>@item.IdProduto</td>
+                        <td>@item.NomeProduto</td>
+                        <td>@item.Preco</td>
+                        <td>@item.Descricao</td>
+                        <td>
+                            <input type="number" name="qtd" value="@item.QTD" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" value="Calcular Total" class="btn btn-success btn-sm" />
+                    </td>
+                    <td>
+                        <b>Valor Total:@Model.ValorTotal</b>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    }
+</body>
+</html>

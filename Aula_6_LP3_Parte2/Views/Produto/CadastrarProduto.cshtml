@@ -5,10 +5,20 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-    </head>
+<head>
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <title></title>
+</head>
     <body>
+        <nav id="menu">
+            <ul>
+                <li id="atu"><h1><a href="@Url.Action("Index","Home")">Home</a></h1></a></li>
+                <li><a href="@Url.Action("Clientes","Cliente")">Cliente</a></li>
+                <li><a href="@Url.Action("Produtos","Produto")">Produto</a></li>
+                <li><a href="@Url.Action("Compras","Compra")">Compra</a></li>
+            </ul>
+        </nav>
         <br />
         @using (Html.BeginForm("CadastrarProduto", "Produto"))
         {
@@ -28,7 +38,7 @@
                 @Html.LabelFor(model => model.Descricao)<br />
                 @Html.TextBoxFor(model => model.Descricao)<br />
             </div>
-            <input type="submit" value="enviar"/>
+            <input type="submit" value="enviar" />
         }
     </body>
 </html>

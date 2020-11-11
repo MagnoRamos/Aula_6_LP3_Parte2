@@ -97,6 +97,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\StyleSheet1.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -110,6 +111,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\JavaScript.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -126,11 +128,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Compra.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -147,6 +152,8 @@
     <Content Include="Views\Cliente\Clientes.cshtml" />
     <Content Include="Views\Cliente\AtualizarCliente.cshtml" />
     <Content Include="Views\Cliente\CadastrarCliente.cshtml" />
+    <Content Include="Views\Compra\Compras.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

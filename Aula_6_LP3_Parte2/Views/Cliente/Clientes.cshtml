@@ -7,11 +7,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="~/Scripts/JavaScript.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <title>Consulta</title>
 </head>
 <body>
+    <nav id="menu">
+        <ul>
+            <li id="atu"><h1><a href="@Url.Action("Index","Home")">Home</a></h1></a></li>
+            <li><a href="@Url.Action("Clientes","Cliente")">Cliente</a></li>
+            <li><a href="@Url.Action("Produtos","Produto")">Produto</a></li>
+            <li><a href="@Url.Action("Compras","Compra")">Compra</a></li>
+        </ul>
+    </nav>
     @using (Html.BeginForm())
     {
         <table class="table table-bordered table-hover">

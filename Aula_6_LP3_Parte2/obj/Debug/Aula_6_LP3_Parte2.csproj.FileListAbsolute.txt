@@ -1,7 +1,7 @@
+C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\roslyn\csc.exe
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\Aula_6_LP3_Parte2.dll.config
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\Aula_6_LP3_Parte2.dll
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\Aula_6_LP3_Parte2.pdb
-C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\roslyn\csc.exe
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\roslyn\csc.exe.config
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\roslyn\csc.rsp
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\roslyn\csi.exe
@@ -71,8 +71,8 @@ C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\pt-br\System.Web.Webpages.Razor.resources.dll
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\pt-br\System.Web.Helpers.resources.dll
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\bin\pt-br\System.Web.Mvc.resources.dll
-C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\obj\Debug\Aula_6_LP3_Parte2.csprojAssemblyReference.cache
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\obj\Debug\Aula_6_LP3_Parte2.csproj.CoreCompileInputs.cache
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\obj\Debug\Aula_6_LP3_Parte2.csproj.CopyComplete
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\obj\Debug\Aula_6_LP3_Parte2.dll
 C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\obj\Debug\Aula_6_LP3_Parte2.pdb
+C:\Users\magno.LAPTOP-TBIVHDCB\source\repos\Aula_6_LP3_Parte2\Aula_6_LP3_Parte2\obj\Debug\Aula_6_LP3_Parte2.csprojAssemblyReference.cache

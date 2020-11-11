@@ -11,5 +11,6 @@ namespace Aula_6_LP3_Parte2.Models
         public string NomeProduto { get; set; }
         public double Preco { get; set; }
         public string Descricao { get; set; }
+        public int QTD { get; set; }
     }
 }
